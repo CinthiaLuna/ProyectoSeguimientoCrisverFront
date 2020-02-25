@@ -1,6 +1,6 @@
 <template lang="html">
   <GridLayout rows="auto,*" class="nt-drawer__content">
-    <StackLayout row="0" class="nt-drawer__header" backgroundColor="black">
+    <StackLayout row="0" class="nt-drawer__header" backgroundColor="#3F3F3F">
       <label class="nt-drawer__header-brand" text="Nombre"></label>
       <label class ="nt-drawer__header-foornote" text="Número de expediente"></label>
     </StackLayout>
@@ -9,6 +9,12 @@
         <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(ReporteDiagnostico)">
           <label col="1" text="Reporte de diagnóstico" class="p-r-10"></label>
         </GridLayout>
+        <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(ReporteCitas)">
+          <label col="1" text="Reporte de Citas" class="p-r-10"></label>
+        </GridLayout>
+        <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(ProgresoPaciente)">
+          <label col="1" text="Progreso del paciente" class="p-r-10"></label>
+        </GridLayout>
       </StackLayout>
     </ScrollView>
   </GridLayout>
@@ -16,6 +22,8 @@
 
 <script>
 import ReporteDiagnostico from "~/components/ReporteDiagnostico";
+import ReporteCitas from "~/components/ReporteCitas";
+import ProgresoPaciente from "~/components/ProgresoPaciente";
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 
@@ -28,11 +36,15 @@ export default {
   data() {
     return {
       ReporteDiagnostico: ReporteDiagnostico,
+      ReporteCitas: ReporteCitas,
+      ProgresoPaciente: ProgresoPaciente,
       selectedPage: ""
     };
   },
   components: {
-    ReporteDiagnostico
+    ReporteDiagnostico,
+    ReporteCitas,
+    ProgresoPaciente
   },
   methods: {
     onNavigationItemTap(component) {

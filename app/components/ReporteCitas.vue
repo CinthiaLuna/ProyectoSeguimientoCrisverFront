@@ -1,6 +1,6 @@
 <template>
-  <page class="page">
-    <ActionBar class="action-bar" title="Reporte de diagnóstico" backgroundColor="#3F3F3F">
+  <Page class="page">
+    <ActionBar class="action-bar" title="Reporte de citas" backgroundColor="#3F3F3F">
       <NavigationButton ios:visibility="collapsed" icon="res://menu" @tap="onDrawerButtonTap" />
       <ActionItem
         icon="res://menu"
@@ -10,12 +10,12 @@
       />
     </ActionBar>
     <StackLayout>
-      <label class="action-bar-title" text="Reporte de diagnóstico"></label>
+      <label class="action-bar-title" text="Reporte de citas"></label>
     </StackLayout>
     <GridLayout>
-      <label class="page__content-placeholder" text="Esta es la pagina de reporte de diagnóstico"></label>
+      <label class="page__content-placeholder" text="Esta es la pagina de reporte de citas"></label>
     </GridLayout>
-  </page>
+  </Page>
 </template>
 
 <script>
