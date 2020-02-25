@@ -22,7 +22,8 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 export default {
-  mounted() {
+  name: "ReporteDiagnostico",
+  mounted: function() {
     SelectedPageService.getInstance().updateSelectedPage("Home");
   },
   methods: {

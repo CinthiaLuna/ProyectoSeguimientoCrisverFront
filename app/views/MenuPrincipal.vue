@@ -6,7 +6,7 @@
     </StackLayout>
     <ScrollView row="1" class="nt-drawer__body">
       <StackLayout>
-        <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(ReporteDiagnostico)">
+        <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(VistaReporteDiagnostico)">
           <label col="1" text="Reporte de diagnóstico" class="p-r-10"></label>
         </GridLayout>
         <GridLayout columns="auto,*" class="nt-drawer__list-item" @tap="onNavigationItemTap(ReporteCitas)">
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import ReporteDiagnostico from "~/components/ReporteDiagnostico";
+import VistaReporteDiagnostico from "./VistaReporteDiagnostico";
 import ReporteCitas from "~/components/ReporteCitas";
 import ProgresoPaciente from "~/components/ProgresoPaciente";
 import * as utils from "~/shared/utils";
@@ -35,14 +35,14 @@ export default {
   },
   data() {
     return {
-      ReporteDiagnostico: ReporteDiagnostico,
+      VistaReporteDiagnostico: VistaReporteDiagnostico,
       ReporteCitas: ReporteCitas,
       ProgresoPaciente: ProgresoPaciente,
       selectedPage: ""
     };
   },
   components: {
-    ReporteDiagnostico,
+    VistaReporteDiagnostico,
     ReporteCitas,
     ProgresoPaciente
   },
