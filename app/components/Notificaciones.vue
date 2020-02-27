@@ -1,6 +1,6 @@
 <template>
-  <page class="page">
-    <ActionBar class="action-bar" title="Reporte de diagnóstico">
+  <Page class="page">
+    <ActionBar class="action-bar" title="Reporte de citas">
       <NavigationButton ios:visibility="collapsed" icon="res://menu" @tap="onDrawerButtonTap" />
       <ActionItem
         icon="res://menu"
@@ -8,23 +8,22 @@
         ios.position="left"
         @tap="onDrawerButtonTap"
       />
-      <label class="action-bar-title" text="Reporte de diagnóstico"></label>
+      <label class="action-bar-title" text="Notificaciones"></label>
     </ActionBar>
     <GridLayout class="page__content">
-      <label class="page__content-placeholder" text="Esta es la pagina de reporte de diagnóstico"></label>
+      <label class="page__content-placeholder" text="Esta es la pagina de Notificaciones"></label>
     </GridLayout>
-  </page>
+  </Page>
 </template>
 
 <script>
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
+import VistaNotificaciones from "~/views/VistaNotificaciones";
 export default {
-  name: "ReporteDiagnostico",
+  name: "ReporteCita",
   mounted() {
-    SelectedPageService.getInstance().updateSelectedPage(
-      "VistaReporteDiagnostico"
-    );
+    SelectedPageService.getInstance().updateSelectedPage("VistaNotificaciones");
   },
   methods: {
     onDrawerButtonTap() {
@@ -36,4 +35,3 @@ export default {
 <style scoped lang="scss">
 @import "~@nativescript/theme/blue";
 </style>
-

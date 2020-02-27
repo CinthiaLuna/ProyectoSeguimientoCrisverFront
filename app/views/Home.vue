@@ -1,6 +1,6 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Pagina principal" backgroundColor="black">
+    <ActionBar class="action-bar" title="Pagina principal">
       <NavigationButton ios:visibility="collapsed" icon="res://menu" @tap="onDrawerButtonTap"></NavigationButton>
       <ActionItem
         icon="res://menu"
@@ -8,11 +8,9 @@
         ios.position="left"
         @tap="onDrawerButtonTap"
       ></ActionItem>
-    </ActionBar>
-    <StackLayout>
       <label class="action-bar-title" text="Pagina principal"></label>
-    </StackLayout>
-    <GridLayout>
+    </ActionBar>
+    <GridLayout backgroudColor="#faf4ec">
       <label class="page__content-placeholder" text="Esta es la pagina principal"></label>
     </GridLayout>
   </Page>

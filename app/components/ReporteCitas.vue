@@ -1,6 +1,6 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Reporte de citas" backgroundColor="#3F3F3F">
+    <ActionBar class="action-bar" title="Reporte de citas">
       <NavigationButton ios:visibility="collapsed" icon="res://menu" @tap="onDrawerButtonTap" />
       <ActionItem
         icon="res://menu"
@@ -8,11 +8,9 @@
         ios.position="left"
         @tap="onDrawerButtonTap"
       />
-    </ActionBar>
-    <StackLayout>
       <label class="action-bar-title" text="Reporte de citas"></label>
-    </StackLayout>
-    <GridLayout>
+    </ActionBar>
+    <GridLayout class="page__content">
       <label class="page__content-placeholder" text="Esta es la pagina de reporte de citas"></label>
     </GridLayout>
   </Page>
@@ -22,8 +20,9 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 export default {
+  name: "ReporteCita",
   mounted() {
-    SelectedPageService.getInstance().updateSelectedPage("Home");
+    SelectedPageService.getInstance().updateSelectedPage("VistaReporteCitas");
   },
   methods: {
     onDrawerButtonTap() {

@@ -1,6 +1,6 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Progreso del paciente" backgroundColor="#3F3F3F">
+    <ActionBar class="action-bar" title="Progreso del paciente">
       <NavigationButton ios:visibility="collapsed" icon="res://menu" @tap="onDrawerButtonTap" />
       <ActionItem
         icon="res://menu"
@@ -8,10 +8,8 @@
         ios.position="left"
         @tap="onDrawerButtonTap"
       />
-    </ActionBar>
-    <StackLayout>
       <label class="action-bar-title" text="Progreso del paciente"></label>
-    </StackLayout>
+    </ActionBar>
     <GridLayout>
       <label class="page__content-placeholder" text="Esta es la pagina de progreso del paciente"></label>
     </GridLayout>
@@ -22,8 +20,11 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 export default {
+  name: "ProgresoPaciente",
   mounted() {
-    SelectedPageService.getInstance().updateSelectedPage("Home");
+    SelectedPageService.getInstance().updateSelectedPage(
+      "VistaProgresoPaciente"
+    );
   },
   methods: {
     onDrawerButtonTap() {
