@@ -10,7 +10,8 @@
       ></ActionItem>
       <label class="action-bar-title" text="Pagina principal"></label>
     </ActionBar>
-    <GridLayout backgroudColor="#faf4ec">
+    <GridLayout class="page__content">
+      <Image src="~/Images/Logocrisver.png" class="imagenInicio" />
       <label class="page__content-placeholder" text="Esta es la pagina principal"></label>
     </GridLayout>
   </Page>
@@ -31,15 +32,7 @@ export default {
 };
 </script>
 
-
-
 <style scoped lang="scss">
+@import "~/app.scss";
 @import "~@nativescript/theme/blue";
-.page__content {
-  &-placeholder {
-    color: #000000;
-    font-size: 20;
-    vertical-align: center;
-  }
-}
 </style>

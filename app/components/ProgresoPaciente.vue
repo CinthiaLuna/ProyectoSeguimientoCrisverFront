@@ -10,7 +10,7 @@
       />
       <label class="action-bar-title" text="Progreso del paciente"></label>
     </ActionBar>
-    <GridLayout>
+    <GridLayout class="page__content">
       <label class="page__content-placeholder" text="Esta es la pagina de progreso del paciente"></label>
     </GridLayout>
   </Page>
@@ -35,5 +35,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~/app.scss";
 @import "~@nativescript/theme/blue";
 </style>

@@ -46,6 +46,12 @@
 }
 .page__content {
   background-color: #faf4ec;
+  .placeholder {
+    font-family: "gothambold";
+  }
+}
+.imagenInicio {
+  vertical-align: top;
 }
 // Drawer navigation custom styles
 .nt-drawer__header-image {

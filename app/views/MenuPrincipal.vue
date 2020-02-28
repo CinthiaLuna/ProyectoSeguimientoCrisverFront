@@ -19,6 +19,7 @@
         <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaTerapia' ? '-seleted': '')" @tap="onNavigationItemTap(VistaTerapia)">
           <Label col="1" text="Terapias" class="p-r-10"></label>
         </GridLayout>
+        <StackLayout class="hr"> </StackLayout>
         <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaNotificaciones' ? '-seleted': '')" @tap="onNavigationItemTap(VistaNotificaciones)">
           <Label col="1" text="Notificaciones" class="p-r-10"></label>
           
@@ -72,10 +73,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~/app.scss";
 @import "~@nativescript/theme/scss/variables/blue";
-.nt-icon {
-  fas {
-    font-weight: 400;
-  }
-}
 </style>
