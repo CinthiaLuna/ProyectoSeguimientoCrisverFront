@@ -18,12 +18,12 @@
           <Image class="m-r-10" src="res://progresopaciente" width="25" height="25" verticalAlignment="center" />
           <label col="1" text="Progreso del paciente" class="p-r-10"></label>
         </GridLayout>
-        <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaTerapia' ? '-seleted': '')" @tap="onNavigationItemTap(VistaTerapia)">
+        <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaTerapia' ? '-selected': '')" @tap="onNavigationItemTap(VistaTerapia)">
           <Image class="m-r-10" src="res://terapias" width="25" height="25" verticalAlignment="center" />
           <Label col="1" text="Terapias" class="p-r-10"></label>
         </GridLayout>
         <StackLayout class="hr"> </StackLayout>
-        <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaNotificaciones' ? '-seleted': '')" @tap="onNavigationItemTap(VistaNotificaciones)">
+        <GridLayout columns="auto,*":class="'nt-drawer__list-item' + (selectedPage === 'VistaNotificaciones' ? '-selected': '')" @tap="onNavigationItemTap(VistaNotificaciones)">
           <Image class="m-r-10" src="res://notificaciones" width="25" height="25" verticalAlignment="center" />
           <Label col="1" text="Notificaciones" class="p-r-10"></label>
           
@@ -70,6 +70,7 @@ export default {
       this.$navigateTo(component, {
         clearHistory: true
       });
+      console.log(this.component);
       utils.closeDrawer();
     }
   }
@@ -79,4 +80,8 @@ export default {
 <style scoped lang="scss">
 @import "~/app.scss";
 @import "~@nativescript/theme/scss/variables/blue";
+    GridLayout[class*="selected"] {
+        background-color: rgb(230, 230, 225);
+        height: 60px;
+    }
 </style>
